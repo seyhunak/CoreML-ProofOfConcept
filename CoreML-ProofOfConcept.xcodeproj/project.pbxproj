@@ -12,6 +12,8 @@
 		7A46CF7D1F17EC290071BA9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A46CF7B1F17EC290071BA9C /* Main.storyboard */; };
 		7A46CF7F1F17EC290071BA9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A46CF7E1F17EC290071BA9C /* Assets.xcassets */; };
 		7A46CF821F17EC290071BA9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A46CF801F17EC290071BA9C /* LaunchScreen.storyboard */; };
+		7A46CF8A1F17EDDF0071BA9C /* Unsplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A46CF891F17EDDF0071BA9C /* Unsplash.swift */; };
+		7A46CF8D1F17F3B30071BA9C /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7A46CF8C1F17F3520071BA9C /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7A46CF7E1F17EC290071BA9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A46CF811F17EC290071BA9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A46CF831F17EC290071BA9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A46CF891F17EDDF0071BA9C /* Unsplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsplash.swift; sourceTree = "<group>"; };
+		7A46CF8C1F17F3520071BA9C /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,9 @@
 		7A46CF761F17EC290071BA9C /* CoreML-ProofOfConcept */ = {
 			isa = PBXGroup;
 			children = (
+				7A46CF8B1F17F3510071BA9C /* ML */,
 				7A46CF771F17EC290071BA9C /* AppDelegate.swift */,
+				7A46CF891F17EDDF0071BA9C /* Unsplash.swift */,
 				7A46CF791F17EC290071BA9C /* ViewController.swift */,
 				7A46CF7B1F17EC290071BA9C /* Main.storyboard */,
 				7A46CF7E1F17EC290071BA9C /* Assets.xcassets */,
@@ -62,6 +68,14 @@
 				7A46CF831F17EC290071BA9C /* Info.plist */,
 			);
 			path = "CoreML-ProofOfConcept";
+			sourceTree = "<group>";
+		};
+		7A46CF8B1F17F3510071BA9C /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				7A46CF8C1F17F3520071BA9C /* Inceptionv3.mlmodel */,
+			);
+			path = ML;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A46CF8A1F17EDDF0071BA9C /* Unsplash.swift in Sources */,
+				7A46CF8D1F17F3B30071BA9C /* Inceptionv3.mlmodel in Sources */,
 				7A46CF7A1F17EC290071BA9C /* ViewController.swift in Sources */,
 				7A46CF781F17EC290071BA9C /* AppDelegate.swift in Sources */,
 			);

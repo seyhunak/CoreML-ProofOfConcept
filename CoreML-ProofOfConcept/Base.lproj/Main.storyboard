@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sgn-Pl-NtK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreML_ProofOfConcept" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +19,71 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ceB-Sp-74F">
+                                <rect key="frame" x="37" y="184" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="GKC-A0-4DP"/>
+                                    <constraint firstAttribute="width" constant="300" id="yG2-Tx-A3n"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db4-KI-ide">
+                                <rect key="frame" x="37" y="146" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zba-IV-pRd"/>
+                                </constraints>
+                                <state key="normal" title="Get Random Photo"/>
+                                <connections>
+                                    <action selector="getRandomButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MWh-cL-MQT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identifing Image..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRb-qM-Gq0">
+                                <rect key="frame" x="37" y="506" width="300" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gRb-qM-Gq0" firstAttribute="leading" secondItem="ceB-Sp-74F" secondAttribute="leading" id="3Cr-9a-COa"/>
+                            <constraint firstItem="db4-KI-ide" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="37" id="6Bu-is-qAF"/>
+                            <constraint firstItem="ceB-Sp-74F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Ig-XA-M0g"/>
+                            <constraint firstItem="ceB-Sp-74F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="P1x-VC-Pv3"/>
+                            <constraint firstAttribute="trailing" secondItem="db4-KI-ide" secondAttribute="trailing" constant="38" id="U7Z-DV-hS7"/>
+                            <constraint firstItem="ceB-Sp-74F" firstAttribute="top" secondItem="db4-KI-ide" secondAttribute="bottom" constant="8" id="nHg-E0-TZu"/>
+                            <constraint firstItem="gRb-qM-Gq0" firstAttribute="trailing" secondItem="ceB-Sp-74F" secondAttribute="trailing" id="pRd-sE-KJP"/>
+                            <constraint firstItem="gRb-qM-Gq0" firstAttribute="top" secondItem="ceB-Sp-74F" secondAttribute="bottom" constant="22" id="qJy-e8-ARA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gRb-qM-Gq0" secondAttribute="bottom" constant="99" id="uYp-Y0-70I"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sNE-GS-IIP"/>
+                    <connections>
+                        <outlet property="classifiedLabel" destination="gRb-qM-Gq0" id="pNW-U1-QZH"/>
+                        <outlet property="imageView" destination="ceB-Sp-74F" id="4S8-ZL-KVX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="476" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LLh-DE-jaG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sgn-Pl-NtK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7MZ-6w-DNy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xko-7b-rUh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egr-hE-bKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-257" y="139"/>
         </scene>
     </scenes>
 </document>
